@@ -1,0 +1,5 @@
+.PHONY: all
+all:
+	g++ -c src/gl3w.c -fpic -o gl3w.o
+	g++ -shared -o libgl3w.a gl3w.o
+	cp libgl3w.a /usr/local/lib/libgl3w.a
